@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<title>Tugas CSS Box Layout - Jasman</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style untuk Header */
+header {
+  background-color: #4CAF50;
+  padding: 30px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+/* Container untuk kolom (Flexbox) */
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* MODIFIKASI: Mengubah layout menjadi 4 kolom yang sama rata */
+.column {
+  flex: 25%; /* 100% dibagi 4 kolom = 25% */
+  padding: 20px;
+  height: 250px; 
+}
+
+/* Pewarnaan background untuk membedakan tiap box kolom */
+.col1 { background-color: #f1f1f1; }
+.col2 { background-color: #e6e6e6; }
+.col3 { background-color: #d9d9d9; }
+.col4 { background-color: #cccccc; }
+
+/* Style untuk Footer */
+footer {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout: Kolom akan bertumpuk ke bawah jika dibuka di layar kecil (HP) */
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Header</h2>
+  <p>Bagian box Header. Layout halaman web utama.</p>
+</header>
+
+<section>
+  <div class="column col1">
+    <h3>Kolom 1 (Kiri)</h3>
+    <p>Ini adalah teks informasi di bagian box Kolom 1.</p>
+  </div>
+  
+  <div class="column col2">
+    <h3>Kolom 2 (Tengah Kiri)</h3>
+    <p>Ini adalah teks informasi di bagian box Kolom 2. Skrip CSS telah dimodifikasi dari 3 kolom menjadi 4 kolom.</p>
+  </div>
+  
+  <div class="column col3">
+    <h3>Kolom 3 (Tengah Kanan)</h3>
+    <p>Ini adalah teks informasi di bagian box Kolom 3. CSS Flexbox digunakan untuk menggantikan tata letak tabel yang lama.</p>
+  </div>
+  
+  <div class="column col4">
+    <h3>Kolom 4 (Kanan)</h3>
+    <p>Ini adalah teks informasi di bagian box Kolom 4. Kolom ini merupakan tambahan dari template standar W3Schools.</p>
+  </div>
+</section>
+
+<footer>
+  <h2>Footer</h2>
+  <p>Bagian box Footer. Berisi informasi penutup atau hak cipta.</p>
+</footer>   
+
+</body>
+</html>
